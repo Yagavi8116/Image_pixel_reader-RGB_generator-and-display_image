@@ -24,6 +24,11 @@ class Pixel {
                     count++;
                     Color c = new Color(image.getRGB(j, i));
                     System.out.println("S.No: " + count + " Red: " + c.getRed() + "  Green: " + c.getGreen() + " Blue: " + c.getBlue());
+                    int red = c.getRed();
+                    int green = c.getGreen();
+                    int blue = c.getBlue();
+                    int x = i;
+                    int y = j;
                 }
             }
 
