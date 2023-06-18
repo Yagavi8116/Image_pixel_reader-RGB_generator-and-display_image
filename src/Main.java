@@ -33,15 +33,18 @@ class Pixel {
                     blue = c.getBlue();
                     x = i;
                     y = j;
-                    
+
                 }
             }
 
         } catch (Exception e) {
         }
     }
+}
 
-    static public void main(String args[]) throws Exception {
+public class Main {
+    static public void main(String args[]) {
         Pixel obj = new Pixel();
     }
 }
+    
