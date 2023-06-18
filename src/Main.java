@@ -1,4 +1,5 @@
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -42,9 +43,16 @@ class Pixel {
     }
 }
 
-public class Main {
+public class Main extends JFrame {
+    Main() {
+        super("Paint");
+        setResizable(false);
+        setVisible(true);
+        setBounds(0, 0, 350, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
     static public void main(String args[]) {
         Pixel obj = new Pixel();
     }
 }
-    
