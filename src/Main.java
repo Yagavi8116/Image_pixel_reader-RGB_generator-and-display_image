@@ -8,6 +8,10 @@ class Pixel {
     int width;
     int height;
 
+    int red, green, blue;
+    int x, y;
+
+
     public Pixel() {
         try {
             File input = new File("src/img.png");
@@ -24,11 +28,12 @@ class Pixel {
                     count++;
                     Color c = new Color(image.getRGB(j, i));
                     System.out.println("S.No: " + count + " Red: " + c.getRed() + "  Green: " + c.getGreen() + " Blue: " + c.getBlue());
-                    int red = c.getRed();
-                    int green = c.getGreen();
-                    int blue = c.getBlue();
-                    int x = i;
-                    int y = j;
+                    red = c.getRed();
+                    green = c.getGreen();
+                    blue = c.getBlue();
+                    x = i;
+                    y = j;
+                    
                 }
             }
 
