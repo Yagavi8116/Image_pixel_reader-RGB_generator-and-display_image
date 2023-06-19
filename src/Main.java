@@ -1,6 +1,8 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -60,3 +62,23 @@ class Main {
     }
 }
 
+public class MyActionListener implements ActionListener {
+    public void actionPerformed(ActionEvent arg0) {
+
+        int red,green,blue;
+        JFrame frame=new JFrame();
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        Color c = new Color(Main.image.getRGB(j, i));
+        System.out.println("S.No: " + count + " Red: " + c.getRed() + "  Green: " + c.getGreen() + " Blue: " + c.getBlue());
+        red = c.getRed();
+        green = c.getGreen();
+        blue = c.getBlue();
+        JPanel newpixel = new JPanel();
+        newpixel.setBounds(j + 5, i + 5, 5, 5);
+        newpixel.setBackground(new Color(red, green, blue));
+        frame.add(newpixel);
+        SwingUtilities.updateComponentTreeUI(frame);
+    }
+}
