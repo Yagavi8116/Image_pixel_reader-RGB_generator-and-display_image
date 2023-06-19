@@ -4,32 +4,25 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-class Pixel extends JPanel {
-    BufferedImage image;
-    int width;
-    int height;
-    int red, green, blue;
-    int x, y;
+class Main {
 
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
-        try {
-            Thread.sleep(10);
-        } catch (Exception e) {
+    static BufferedImage image;
+    static int width;
+    static int height;
+    static int red;
+    static int green;
+    static int blue;
 
-        }
-        repaint();
-        g2d.setColor(new Color(red, green, blue));
-        g2d.fillOval(x, y, 5, 10);
+    static JFrame frame;
+    static int x, y;
 
-    }
 
-    public Pixel() {
-        setBounds(0, 0, 350, 200);
-        setVisible(true);
-        setLayout(null);
-        repaint();
+    public static void createAndShowGUI() {
+        frame = new JFrame();
+        frame.getContentPane().setLayout(null);
+        frame.setSize(500, 500);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         try {
             File input = new File("src/img.png");
             image = ImageIO.read(input);
@@ -49,7 +42,7 @@ class Pixel extends JPanel {
                     blue = c.getBlue();
                     x = i;
                     y = j;
-                    Graphics g = this.getGraphics();
+
                 }
             }
 
@@ -57,24 +50,13 @@ class Pixel extends JPanel {
         }
     }
 
-}
-
-public class Main extends JFrame {
-    private static Pixel pixel;
-
-    Main() {
-        super("Paint");
-        setResizable(false);
-        setVisible(true);
-        setBounds(0, 0, 350, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
     public static void main(String[] args) {
-        Main paint = new Main();
-        paint.setLocationRelativeTo(null);
-
-        pixel = new Pixel();
-        paint.add(pixel);
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 }
+
