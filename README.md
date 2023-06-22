@@ -1,4 +1,5 @@
-# image_java
+# Image_pixel_reader RGB_generator and display_image
+
 A Java application that allows you to read the pixels of an image, generate RGB values for each pixel, and display the image with the RGB values overlaid.
 
 •	Read image pixels: The program can load an image file and read the RGB values of each pixel.
