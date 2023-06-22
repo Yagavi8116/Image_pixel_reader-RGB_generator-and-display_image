@@ -15,3 +15,7 @@ To do:
 •	The program will read the pixels of the image and generate the corresponding RGB values.
 
 •	The image will be displayed on the window with the RGB values overlaid.
+
+Note:
+
+Maximum image size should be 250x250
