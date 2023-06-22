@@ -5,7 +5,7 @@ A Java application that allows you to read the pixels of an image, generate RGB 
 
 •	RGB generation: Based on the pixel values, the program generates the corresponding RGB values.
 
-•	Image display: The image is displayed on the screen with the RGB values overlaid.
+•	Image display: The image is displayed on the window with the RGB values overlaid.
 
 To do:
 
@@ -13,4 +13,4 @@ To do:
 
 •	The program will read the pixels of the image and generate the corresponding RGB values.
 
-•	The image will be displayed on the screen with the RGB values overlaid.
+•	The image will be displayed on the window with the RGB values overlaid.
