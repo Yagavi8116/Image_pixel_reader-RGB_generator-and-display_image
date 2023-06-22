@@ -18,4 +18,4 @@ To do:
 
 Note:
 
-Maximum image size should be 250x250
+      Maximum image size should be 250x250
